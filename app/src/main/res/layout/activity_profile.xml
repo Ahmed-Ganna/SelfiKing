@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/activity_profile"
+    tools:context="com.selfi.android.ui.profile.ProfileScreen">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/SelfiKingToolBar"
+        android:id="@+id/tool_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/cover_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_cover_height"
+        android:orientation="vertical"
+        android:layout_below="@+id/tool_bar">
+
+        <ImageView
+            android:id="@+id/cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_profile_header"/>
+
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            app:layout_collapseMode="parallax"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            app:border="true"
+            app:border_color="@android:color/white"
+            app:border_width="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/avatar_placeholder" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/join_us"
+            android:id="@+id/join_us_btn"
+            android:background="@drawable/shape_join_button"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="0dp"
+            android:textAppearance="?android:textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/count_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp"
+            android:shadowColor="#69000000"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:text="0"
+            android:textColor="@color/primary_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/label_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/count_points"
+            android:layout_marginRight="15dp"
+            android:shadowColor="#69000000"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:text="@string/point"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/count_selfies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/label_points"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:shadowColor="#69000000"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:text="0"
+            android:textColor="@color/primary_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/label_selfies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/count_selfies"
+            android:layout_marginRight="15dp"
+            android:shadowColor="#69000000"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:text="Selfies"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#32000000"
+        android:layout_below="@+id/cover_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="My selfies"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/my_selfies_label"/>
+    <com.etsy.android.grid.StaggeredGridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:column_count="2"
+        app:item_margin="4dp"
+        android:layout_below="@id/my_selfies_label"/>
+
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/loading"
+        style="@style/CircularThemeProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:cpb_color="@color/colorPrimary" />
+</RelativeLayout>

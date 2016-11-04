@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.pick.PickScreen">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/SelfiKingToolBar"
+        android:id="@+id/tool_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:layout_below="@+id/tool_bar">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:src="@drawable/page_bg"
+        android:scaleType="centerCrop"
+        android:id="@+id/editedImageView"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/photo_description_side_padding"
+        android:paddingRight="@dimen/photo_description_side_padding"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:id="@+id/bottom_bar"
+        >
+
+        <ImageView
+            android:id="@+id/avatar_img"
+            android:layout_width="@dimen/avatarSize"
+            android:layout_height="@dimen/avatarSize"
+            android:src="@drawable/avatar_placeholder"
+            android:layout_centerVertical="true"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/avatar_img"
+            android:layout_toRightOf="@id/avatar_img"
+            android:layout_alignTop="@id/avatar_img"
+            android:paddingLeft="@dimen/photo_text_left_padding"
+            android:layout_centerVertical="true"
+            >
+
+            <AutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="#hash_Tag"
+                android:textColorHint="#ded6d6"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:textSize="@dimen/photo_desc_title"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:id="@+id/hashtag_edit_text"
+                style="@style/Autocomplete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:id="@+id/user_name"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/photo_desc_author"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/loading"
+        style="@style/CircularThemeProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:cpb_color="@color/colorPrimary" />
+
+    <com.github.jorgecastilloprz.FABProgressCircle
+        android:id="@+id/fabProgressCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="82dp"
+        android:visibility="gone"
+        >
+
+        <!--Google FAB-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/upload_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_upload"
+            app:rippleColor="@color/fab_ripple"
+            app:elevation="@dimen/fab_elevation"
+            app:borderWidth="0dp"
+            />
+
+    </com.github.jorgecastilloprz.FABProgressCircle>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_pick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="77dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorRipple="@color/white">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera"
+            fab:fab_size="mini"
+            fab:fab_label="camera" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_gallary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gallery"
+            fab:fab_size="mini"
+            fab:fab_label="gallery" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset_btn"
+        android:src="@drawable/ic_delete"
+        android:layout_below="@+id/tool_bar"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:clickable="true"/>
+</RelativeLayout>

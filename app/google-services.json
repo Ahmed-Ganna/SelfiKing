@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1002961387064",
+    "firebase_url": "https://selfi-9e6c0.firebaseio.com",
+    "project_id": "selfi-9e6c0",
+    "storage_bucket": "selfi-9e6c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002961387064:android:2272bb8d8b3490be",
+        "android_client_info": {
+          "package_name": "com.selfi.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002961387064-559lv1b8j0oc4eklccvq6ie2nqr6mrgm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.selfi.android",
+            "certificate_hash": "3E4BB810F0CB3D93ECCD7876E74BEE674FA33C03"
+          }
+        },
+        {
+          "client_id": "1002961387064-i1u0v4afk9eg7evcpt8tqja231dkoikr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZo6ZwNBFjgfgcKYnbDDV65YKzz6w_eGM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002961387064-i1u0v4afk9eg7evcpt8tqja231dkoikr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

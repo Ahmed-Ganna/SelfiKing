@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="android:colorBackground">@android:color/white</item>
+    </style>
+
+
+    <style name="SelfiKingToolBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:actionBarSize</item>
+        <item name="android:theme">@style/AppTheme.AppBarOverlay</item>
+        <item name="android:popupTheme">@style/AppTheme.PopupOverlay</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+</resources>

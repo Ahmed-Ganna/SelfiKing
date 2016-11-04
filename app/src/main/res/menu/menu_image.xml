@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools">
+    <item
+        android:icon="@drawable/ic_report"
+        android:id="@+id/send_report"
+        app:showAsAction="always"
+        android:title="Report"
+        android:visible="false"/>
+    <item
+        android:icon="@drawable/ic_action_share"
+        android:id="@+id/share"
+        app:showAsAction="always"
+        android:title="Share" />
+    <item
+        android:icon="@drawable/ic_feedback"
+        android:id="@+id/feedback"
+        app:showAsAction="always"
+        android:title="Feedback"
+        android:visible="false" />
+</menu>

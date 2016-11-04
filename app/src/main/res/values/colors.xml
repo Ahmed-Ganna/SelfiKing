@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorPrimary">#d54714</color>
+    <color name="colorPrimaryDark">#d54714</color>
+    <color name="colorPrimaryTrans">#ebd54714</color>
+    <color name="white">#FFFFFF</color>
+    <color name="bg_bottom_panel">#ffffff</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="bg_dialog">#2a2b2c</color>
+    <color name="bg_dialog_rate">#b4de4913</color>
+    <color name="bg_interstitial">#f0000000</color>
+    <color name="bg_selfie_preview">#1e1e1e</color>
+    <color name="black">#000000</color>
+    <color name="blue">#3498db</color>
+    <color name="suggestions_entry">#d4d4d4</color>
+    <color name="suggestions_send">#2800c448</color>
+    <color name="fab_ripple">#7891ff</color>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.selfi.android.ui.selfi.SelfiScreen">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/SelfiKingToolBar"
+        android:id="@+id/tool_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:id="@+id/results_layout"
+        android:visibility="gone">
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/no_internet_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/bg_no_internet"
+        android:layout_below="@+id/tool_bar"/>
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/loading"
+        style="@style/CircularThemeProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:cpb_color="@color/colorPrimary" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snack_bar"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tool_bar"/>
+
+    <com.etsy.android.grid.StaggeredGridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        app:column_count="2"
+        android:scrollbarThumbVertical="@drawable/scroll_style"
+        app:item_margin="2dp"
+        android:layout_below="@id/tool_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bg_bottom_panel"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/notification_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_notification" />
+
+        <ImageButton
+            android:id="@+id/pick_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_pick_photo" />
+
+        <ImageButton
+            android:id="@+id/profile_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_profile" />
+    </RelativeLayout>
+
+</RelativeLayout>

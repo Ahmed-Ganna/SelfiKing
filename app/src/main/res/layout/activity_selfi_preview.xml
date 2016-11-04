@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_selfi_preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.selfi.android.ui.selfi.SelfiPreviewScreen">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/SelfiKingToolBar"
+        android:id="@+id/tool_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/tool_bar"
+        android:background="@color/bg_selfie_preview">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:background="@color/bg_selfie_preview"
+            android:scaleType="center" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/image_container"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/author_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_collapseMode="parallax"
+            android:layout_marginRight="8dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"/>
+
+        <com.like.LikeButton
+            android:id="@+id/like_btn"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            app:anim_scale_factor="2"
+            app:circle_end_color="@color/white"
+            app:circle_start_color="@color/white"
+            app:dots_primary_color="@color/colorAccent"
+            app:dots_secondary_color="@color/colorPrimary"
+            app:icon_size="30dp"
+            app:icon_type="Heart"
+            app:is_enabled="true"
+            android:layout_marginLeft="2dp"
+            app:like_drawable="@drawable/ic_like_white_filled"
+            app:unlike_drawable="@drawable/ic_like_white_unfilled" />
+
+        <TextView
+            android:id="@+id/likes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/like_btn"
+            android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/author_image"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_share_btn"
+            android:text="@string/share"
+            android:layout_marginRight="8dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/report_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:background="@color/white"
+        android:clickable="true"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/report_title"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_report"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/report_option_1"
+                android:textColor="#b4000000" />
+
+            <RadioButton
+                android:id="@+id/option_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/report_option_2"
+                android:textColor="#b4000000" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/options"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#69000000" />
+
+        <Button
+            android:id="@+id/send_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/divider"
+            android:background="@color/suggestions_send"
+            android:text="@string/report" />
+    </RelativeLayout>
+
+    <TextView
+        android:background="@color/white"
+        android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/result_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:textColor="#b4000000"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        android:layout_below="@+id/tool_bar"/>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="grid_view_margin">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profile_cover_height">200dp</dimen>
+
+
+    <dimen name="avatarSize">50dp</dimen>
+    <dimen name="photo_text_left_padding">20dp</dimen>
+    <dimen name="photo_description_side_padding">20dp</dimen>
+    <dimen name="photo_desc_title">18sp</dimen>
+    <dimen name="photo_desc_author">14sp</dimen>
+    <dimen name="overflow_icon_size">40dp</dimen>
+    <dimen name="fab__circle_margin">26dp</dimen>
+    <dimen name="fab_top_margin">-32dp</dimen>
+    <dimen name="fab_elevation">4dp</dimen>
+</resources>

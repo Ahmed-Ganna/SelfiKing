@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Selfi king</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="facebook_app_id">783956241741732</string>
+    <string name="snackbar_no_internet">Check your internet connection</string>
+    <string name="join_us">Join us</string>
+    <string name="point">Point</string>
+    <string name="share">Share</string>
+    <string name="report_title">What is your problem</string>
+    <string name="report">Send</string>
+    <string name="report_option_1">Has a sexual content</string>
+    <string name="report_option_2">Not loading</string>
+    <string name="report_status_success">نجاح التقرير</string>
+    <string name="report_status_failure">فشل التقرير</string>
+    <string name="new_selfi">New Selfi</string>
+    <string name="join_later">Not now</string>
+</resources>

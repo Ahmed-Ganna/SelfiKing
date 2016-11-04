@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_competition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary_text"
+    tools:context="com.selfi.android.ui.main.MainScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:mrl_rippleColor="@color/white"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleHover="true"
+            android:layout_marginRight="1dp"
+        >
+            <ImageView
+                style="@style/MainCompText"
+                android:src="@drawable/elbahr_bg"
+                android:id="@+id/elbahr_view"
+                />
+       </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:mrl_rippleColor="@color/white"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleHover="true"
+            android:layout_marginLeft="1dp"
+            >
+            <ImageView
+                style="@style/MainCompText"
+                android:src="@drawable/eela_bg"
+                android:id="@+id/eela_view"
+                />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp">
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:mrl_rippleColor="@color/white"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleHover="true"
+            android:layout_marginRight="1dp"
+            >
+
+            <ImageView
+                android:src="@drawable/king_bg"
+                style="@style/MainCompText"
+                android:id="@+id/king_view"
+                />
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:mrl_rippleColor="@color/white"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleHover="true"
+            android:layout_marginLeft="1dp"
+            >
+            <ImageView
+                style="@style/MainCompText"
+                android:src="@drawable/shela_bg"
+                android:id="@+id/shela_view"
+                />
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+
+</LinearLayout>
