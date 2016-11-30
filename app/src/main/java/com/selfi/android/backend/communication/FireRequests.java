@@ -149,9 +149,11 @@ public class FireRequests {
                     public Transaction.Result doTransaction(MutableData currentData) {
                         if (currentData.getValue()==null){
                             currentData.setValue(0);
+                        }else {
+                            Logger.forDebug("current likes "+currentData);
+                            currentData.setValue(islike?((Double)currentData.getValue())+1:((Double)currentData.getValue())-1);
                         }
-                        Logger.forDebug("current likes "+currentData);
-                        currentData.setValue(islike?((Double)currentData.getValue())+1:((Double)currentData.getValue())-1);
+
                         return Transaction.success(currentData);
                     }
 
